@@ -30,6 +30,7 @@
   "homepage": "https://github.com/kyleednie/kanbas-node-server-app#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2"
   }
 }
