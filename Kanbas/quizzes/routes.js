@@ -6,6 +6,12 @@ function QuizRoutes(app) {
       .filter((q) => q.course === cid);
     res.send(quizzes);
   });
+  app.get("/api/quizzes/:qid", (req, res) => {
+    const { qid } = req.params;
+    const quiz = db.quizzes
+      .find((q) => q._id === qid);
+    res.send(quiz);
+  });
   app.put("/api/quizzes/:qid", (req, res) => {
     const { qid } = req.params;
     const quizIndex = db.quizzes.findIndex(
